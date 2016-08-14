@@ -1,0 +1,34 @@
+<% provide(:title, "Products") %>
+<h1>All of our products</h1>
+
+<div class="container">
+  <div class="row col-sm-12">
+    <table class="table table-striped" id="productsDisplay">
+      <thead>
+        <tr>
+          <th>Department</th>
+          <th>Name</th>
+          <th>SKU</th>
+          <th>Model ID</th>
+          <th>Price</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.department %></td>
+            <td><%= product.name %></td>
+            <td><%= product.sku %></td>
+            <td><%= product.model %></td>
+            <td><%= product.price %></td>
+
+            <!--<td><%#= link_to 'Show', product %></td>-->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
