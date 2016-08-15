@@ -10,6 +10,6 @@
 
 15.times do
 
-    Product.create ({ department: Faker::Commerce.department(5), name: Faker::Commerce.product_name, sku: Faker::Code.ean, model: Faker::Code.asin, price: Faker::Commerce.price, category: Faker::Commerce.department(1)})
+    Product.create ({ department: Faker::Commerce.department(1), product_name: Faker::Commerce.product_name, sku: Faker::Code.ean, model: Faker::Code.asin, price: Faker::Commerce.price, category: Faker::Commerce.department(3)})
 
   end
