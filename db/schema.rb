@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160815234512) do
+ActiveRecord::Schema.define(version: 20160816030618) do
 
   create_table "products", force: :cascade do |t|
     t.string   "department"
@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(version: 20160815234512) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "category"
+  end
+
+  create_table "promotions", force: :cascade do |t|
+    t.string   "department"
+    t.string   "store"
+    t.string   "promo_type"
+    t.string   "level"
+    t.text     "description"
+    t.string   "promotion_code"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

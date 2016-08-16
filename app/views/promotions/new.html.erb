@@ -1,0 +1,28 @@
+<%= form_for @promotion, url: {action: "create"}, html: {class: "promotion_form"} do |f| %>
+  <%= f.label :department %>
+  <!--<%#= f.options_for_select([['Grocery', 1], ['Tools', 2], ['Health', 3]], 3) %>-->
+    <%= f.text_field :department %>
+  <%= f.label :store %>
+    <%= f.text_field :store %>
+  <%= f.label :promo_type %>
+    <%= f.text_field :promo_type %>
+  <%= f.label :level %>
+    <%= f.text_field :level %>
+  <%= f.label :description %>
+    <%= f.text_area :description, size: "6x3" %>
+  <%= radio_button_tag(:promotion_code, "Yes") %>
+  <%= label_tag(:promotion_code, "Yes") %>
+    <%= radio_button_tag(:promotion_code, "No") %>
+  <%= label_tag(:promotion_code, "No") %>
+
+  <%= f.label :start_date %>
+    <%= f.datetime_field :start_date %>
+  <%= f.label :end_date %>
+    <%= f.datetime_field :end_date %>
+  <%= f.submit "Submit Promotion" %>
+<% end %>
+
+<!-- Possibly use to create a select box for department -->
+<!--<%#= collection_select(:person, :city_id, City.all, :id, :name) %>-->
+
+<!--<%#= f.collection_select :department, Product.all, :id, :name, { :prompt => "Please Select" }, { :class => "promtoion_department" } %>-->
